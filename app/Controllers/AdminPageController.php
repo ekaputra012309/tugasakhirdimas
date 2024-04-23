@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use CodeIgniter\Debug\Toolbar\Collectors\Views;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class AdminPageController extends BaseController
