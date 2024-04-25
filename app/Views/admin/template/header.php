@@ -10,7 +10,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <!-- <img src="/favicon.ico" class="img-circle elevation-2" alt="User Image"> -->
-                <?= session('namakaryawan') ?> &nbsp; <i class="fas fa-user mr-2"></i>
+                <?= session('namakaryawan') ?> &nbsp; <i class="fas fa-user-circle mr-2"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a href="#" class="dropdown-item">

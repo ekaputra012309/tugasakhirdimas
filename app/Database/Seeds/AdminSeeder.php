@@ -13,10 +13,11 @@ class AdminSeeder extends Seeder
 
         // Data to insert
         $data = [
+            'email' => 'admin@gmail.com',
+            'namakaryawan' => 'John Park',
+            'id_jabatan' => '1',
             'username' => 'johnpark',
             'password' => password_hash('password123', PASSWORD_DEFAULT),
-            'namakaryawan' => 'John Park',
-            'email' => 'admin@gmail.com',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ];

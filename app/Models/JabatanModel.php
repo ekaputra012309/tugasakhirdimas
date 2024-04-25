@@ -4,20 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class AdminModel extends Model
+class JabatanModel extends Model
 {
-    protected $table            = 'admin';
-    protected $primaryKey       = 'id';
+    protected $table            = 'jabatan';
+    protected $primaryKey       = 'id_jabatan';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'email',
-        'namakaryawan',
-        'id_jabatan',
-        'username',
-        'password',
+        'nama_jabatan',
         'created_at',
         'updated_at',
     ];
@@ -47,15 +43,4 @@ class AdminModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
-
-    public function getAdminsWithJabatan($id = null)
-    {
-        $query = $this->db->table('admin')
-            ->join('jabatan', 'admin.id_jabatan = jabatan.id_jabatan');
-
-        if ($id !== null) {
-            $query->where('admin.id', $id);
-        }
-        return $query->get()->getResult();
-    }
 }

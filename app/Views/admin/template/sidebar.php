@@ -39,15 +39,15 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="/admin/admin" class="nav-link">
                                 <i class="fas fa-user nav-icon"></i>
                                 <p>Admin</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-user-tie nav-icon"></i>
-                                <p>Karyawan</p>
+                            <a href="/admin/jabatan" class="nav-link">
+                                <i class="fas fa-user-tag nav-icon"></i>
+                                <p>Jabatan</p>
                             </a>
                         </li>
                     </ul>

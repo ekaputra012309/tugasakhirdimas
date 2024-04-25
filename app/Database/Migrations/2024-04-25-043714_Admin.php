@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class TableAdmin extends Migration
+class Admin extends Migration
 {
     public function up()
     {
@@ -16,6 +16,14 @@ class TableAdmin extends Migration
                 'unsigned' => true,
                 'auto_increment' => true,
             ],
+            'email' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
+            'namakaryawan' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
+            ],
             'username' => [
                 'type' => 'VARCHAR',
                 'constraint' => 100,
@@ -24,13 +32,10 @@ class TableAdmin extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
-            'namakaryawan' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
-            ],
-            'email' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
+            'id_jabatan' => [
+                'type' => 'INT',
+                'constraint' => 11,
+                'unsigned' => true, // Make sure it's unsigned
             ],
             'created_at' => [
                 'type' => 'DATETIME',
@@ -45,6 +50,7 @@ class TableAdmin extends Migration
         // Add created_at and updated_at timestamps
         $this->forge->addField($fields);
         $this->forge->addPrimaryKey('id');
+        $this->forge->addForeignKey('id_jabatan', 'jabatan', 'id_jabatan', 'CASCADE', 'CASCADE');
         $this->forge->createTable('admin', true);
     }
 
